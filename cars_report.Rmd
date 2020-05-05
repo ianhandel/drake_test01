@@ -1,0 +1,36 @@
+---
+title: "Cars Report"
+author: "Ian Handel"
+date: "05/05/2020"
+output: html_document
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+### A plot of cars data
+
+```{r}
+loadd(cars_plot)
+cars_plot
+```
+
+### A summary of cars data
+
+```{r}
+loadd(cars_summary)
+cars_summary %>% 
+  gt()
+```
+
+### A cars model
+
+```{r}
+loadd(cars_model)
+cars_model
+```
+
+
