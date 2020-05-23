@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 
 # drake_test01
 
-A demo of using Drakw for more reproducible research.
+A demo of using [Drake](https://github.com/ropensci/drake) for more reproducible research.
 
 R directory contains:
 
@@ -27,9 +27,22 @@ To try use: ```source("make.R")```
 
 Look at the plan with: ```ians_analysis```
 
-Load in the objects that Drake makes with, for exanmple: ```loadd(cars_summary)```
+Load in the objects that Drake makes with, for example: ```loadd(cars_summary)```
 
-Then it'll be in your R workspace.
+Then it'll be in your R workspace...
+
+```{r, include = FALSE}
+source("make.R")
+loadd(cars_summary)
+```
+
+
+```{r}
+ls()
+
+cars_summary
+```
+
 
 Or read it directly e.g. ```print(readd(cars_summary))```
 

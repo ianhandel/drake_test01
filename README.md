@@ -3,7 +3,8 @@
 
 # drake\_test01
 
-A demo of using Drakw for more reproducible research.
+A demo of using [Drake](https://github.com/ropensci/drake) for more
+reproducible research.
 
 R directory contains:
 
@@ -18,9 +19,23 @@ To try use: `source("make.R")`
 
 Look at the plan with: `ians_analysis`
 
-Load in the objects that Drake makes with, for exanmple:
+Load in the objects that Drake makes with, for example:
 `loadd(cars_summary)`
 
-Then it’ll be in your R workspace.
+Then it’ll be in your R workspace…
+
+``` r
+ls()
+#> [1] "cars_summary"   "ians_analysis"  "plot_cars"      "regress_cars"  
+#> [5] "summarise_cars"
+
+cars_summary
+#> # A tibble: 3 x 3
+#>   drive             mean_hwy mean_cty
+#>   <chr>                <dbl>    <dbl>
+#> 1 4x4                   19.2     14.3
+#> 2 Front wheel Drive     28.2     20  
+#> 3 Rear wheel Drive      21       14.1
+```
 
 Or read it directly e.g. `print(readd(cars_summary))`
