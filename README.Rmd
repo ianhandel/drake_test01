@@ -34,9 +34,9 @@ source("make.R")
 ```
 
 
-Look at the plan with:
+Look at the plan with: ```ians_analysis```
 
-```{r}
+```{r, echo = FALSE}
 ians_analysis
 ```
 
