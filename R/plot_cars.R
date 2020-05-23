@@ -10,8 +10,8 @@
 plot_cars <- function(df) {
 
   ggplot(df) +
-    aes(x = displ, y = hwy) +
+    aes(x = displ, y = hwy, colour = drive) +
     geom_point() +
-    facet_wrap(~ drive)
+    geom_smooth()
 
 }

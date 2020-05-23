@@ -1,5 +1,3 @@
-library(drake)
-
 source("R/packages.R")
 source("R/plot_cars.R")
 source("R/summarise_cars.R")

@@ -14,7 +14,8 @@ ians_analysis <-
     cars_model = regress_cars(merged_data),
     
     report = rmarkdown::render(
-          knitr_in("cars_report.Rmd"),
-          output_file = file_out("car_report.html"),
+          knitr_in("doc/cars_report.Rmd"),
+          output_file = file_out("doc/car_report.html"),
+          output_dir = "doc",
           quiet = TRUE)
   )
