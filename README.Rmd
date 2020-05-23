@@ -44,7 +44,11 @@ cars_summary
 ```
 
 
-Or read it directly e.g. ```print(readd(cars_summary))```
+Or read it directly e.g.
+
+```{r}
+print(readd(cars_summary))
+```
 
 
 

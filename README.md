@@ -38,4 +38,14 @@ cars_summary
 #> 3 Rear wheel Drive      21       14.1
 ```
 
-Or read it directly e.g. `print(readd(cars_summary))`
+Or read it directly e.g.
+
+``` r
+print(readd(cars_summary))
+#> # A tibble: 3 x 3
+#>   drive             mean_hwy mean_cty
+#>   <chr>                <dbl>    <dbl>
+#> 1 4x4                   19.2     14.3
+#> 2 Front wheel Drive     28.2     20  
+#> 3 Rear wheel Drive      21       14.1
+```
