@@ -17,7 +17,21 @@ plan.
 
 To try use: `source("make.R")`
 
-Look at the plan with: `ians_analysis`
+Look at the plan with:
+
+``` r
+ians_analysis
+#> # A tibble: 7 x 2
+#>   target      command                                                           
+#>   <chr>       <expr_lst>                                                        
+#> 1 cars        read_csv(file_in("data/car_data.csv"))                           …
+#> 2 drive_look… read_csv(file_in("data/drive_lookup.csv"))                       …
+#> 3 merged_data left_join(cars, drive_lookup, by = "drv")                        …
+#> 4 cars_summa… summarise_cars(merged_data)                                      …
+#> 5 cars_plot   plot_cars(merged_data)                                           …
+#> 6 cars_model  regress_cars(merged_data)                                        …
+#> 7 report      rmarkdown::render(knitr_in("doc/cars_report.Rmd"), output_file = …
+```
 
 Load in the objects that Drake makes with, for example:
 `loadd(cars_summary)`
@@ -49,3 +63,6 @@ print(readd(cars_summary))
 #> 2 Front wheel Drive     28.2     20  
 #> 3 Rear wheel Drive      21       14.1
 ```
+
+If you change the plan and then run make.R only the targets that depend
+on the changes will be re-run\!

@@ -25,7 +25,16 @@ In the root dirctory make.R will 'source' all the R scripts and run the plan.
 
 To try use: ```source("make.R")```
 
-Look at the plan with: ```ians_analysis```
+```{r, include = FALSE}
+source("make.R")
+```
+
+
+Look at the plan with:
+
+```{r}
+ians_analysis
+```
 
 Load in the objects that Drake makes with, for example: ```loadd(cars_summary)```
 
@@ -35,6 +44,7 @@ Then it'll be in your R workspace...
 source("make.R")
 loadd(cars_summary)
 ```
+
 
 
 ```{r}
@@ -49,6 +59,8 @@ Or read it directly e.g.
 ```{r}
 print(readd(cars_summary))
 ```
+
+If you change the plan and then run make.R only the targets that depend on the changes will be re-run!
 
 
 
