@@ -26,6 +26,10 @@ In the root dirctory make.R will 'source' all the R scripts and run the plan.
 To try use: ```source("make.R")```
 
 ```{r, include = FALSE}
+drake::clean()
+```
+
+```{r, echo = FALSE}
 source("make.R")
 ```
 

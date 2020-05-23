@@ -15,7 +15,45 @@ R directory contains:
 In the root dirctory make.R will ‘source’ all the R scripts and run the
 plan.
 
-To try use: `source("make.R")`
+To try use:
+    `source("make.R")`
+
+    #> ── Attaching packages ─────────────────────────────────────────────────────────────────────────────────────── tidyverse 1.3.0 ──
+    #> ✓ ggplot2 3.3.0     ✓ purrr   0.3.4
+    #> ✓ tibble  3.0.1     ✓ dplyr   0.8.5
+    #> ✓ tidyr   1.0.2     ✓ stringr 1.4.0
+    #> ✓ readr   1.3.1     ✓ forcats 0.5.0
+    #> ── Conflicts ────────────────────────────────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+    #> x tidyr::expand() masks drake::expand()
+    #> x dplyr::filter() masks stats::filter()
+    #> x tidyr::gather() masks drake::gather()
+    #> x dplyr::lag()    masks stats::lag()
+    #> ▶ target cars
+    #> Parsed with column specification:
+    #> cols(
+    #>   manufacturer = col_character(),
+    #>   model = col_character(),
+    #>   displ = col_double(),
+    #>   year = col_double(),
+    #>   cyl = col_double(),
+    #>   trans = col_character(),
+    #>   drv = col_character(),
+    #>   cty = col_double(),
+    #>   hwy = col_double(),
+    #>   fl = col_character(),
+    #>   class = col_character()
+    #> )
+    #> ▶ target drive_lookup
+    #> Parsed with column specification:
+    #> cols(
+    #>   drv = col_character(),
+    #>   drive = col_character()
+    #> )
+    #> ▶ target merged_data
+    #> ▶ target cars_plot
+    #> ▶ target cars_summary
+    #> ▶ target cars_model
+    #> ▶ target report
 
 Look at the plan with:
 
